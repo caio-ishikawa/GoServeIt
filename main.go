@@ -10,6 +10,8 @@ import (
 	"os"
 	"time"
 )
+
+const BLUE = "\033[1;34m"
 const RED = "\033[31m"
 const RESET = "\033[0m"
 
@@ -104,13 +106,11 @@ func initLogger() *ReqLogger {
 func (rl *ReqLogger) Printf(str string, v ...interface{}) {
 	timestamp := time.Now().Format(time.RFC3339)
 
-	blue := "\033[1;34m"
-	reset := "\033[0m"
 	formattedLogEntry := fmt.Sprintf(
 		"%s[%s]%s %s\n",
-		blue,
+		BLUE,
 		timestamp,
-		reset,
+		RESET,
 		fmt.Sprintf(str, v...),
 	)
 
@@ -122,17 +122,17 @@ func (rl *ReqLogger) Printf(str string, v ...interface{}) {
 
 // Prints ascii title and starting message
 func displayStartScreen(filePath string, portNum string) {
-	fmt.Printf("%s%s%s\n", RED, LOGO, RESET)
+	fmt.Printf("%s%s%s\n", BLUE, LOGO, RESET)
 	fmt.Printf(
 		"Serving %s%s%s on port %s%s%s\n",
-		RED,
+		BLUE,
 		filePath,
 		RESET,
-		RED,
+		BLUE,
 		portNum,
 		RESET,
 	)
-	fmt.Println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+	fmt.Print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
 }
 
 // Logs request. TODO: add debug mode in Config, and print reqDump depending on that
