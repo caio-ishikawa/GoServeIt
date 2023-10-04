@@ -1,5 +1,7 @@
 GoServeIt v1.0.0
 ----------------
+<img src="https://i.imgur.com/L5sXufv.png">
+
 GoServeIt is a zero-dependency command-line tool that quickly starts a barebones HTTP server to serve files in localhost. The main usecase is to quickly serve scripts for CTF challenges. 
 
 Installation
