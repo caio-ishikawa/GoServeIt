@@ -10,7 +10,7 @@ Installation
 If you have a Go environment ready to go, it's as easy as:
 
 ```sh
-go install github.com/caio-ishikawa/GoServeIt/@1.0.0
+go install github.com/caio-ishikawa/GoServeIt@1.0.0
 ```
 
 ### Building From Source
