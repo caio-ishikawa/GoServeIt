@@ -6,18 +6,18 @@ GoServeIt is a zero-dependency command-line tool that quickly starts a barebones
 
 Installation
 ---------------
-### Using ```go get```
+### Using ```go install```
 If you have a Go environment ready to go, it's as easy as:
 
 ```sh
-go get github.com/caio-ishikawa/goserveit
+go install github.com/caio-ishikawa/GoServeIt/@1.0.0
 ```
 
 ### Building From Source
 This tool is written in [Go](https://golang.org/), and you will need to install the Go language/compiler/toolkit if you don't already have it. Full details of installation and set up can be found [on the Go language website](https://golang.org/doc/install). Once installed you can run the following command:
 
 ```sh
-git clone https://github.com/caio-ishikawa/goserveit.git && cd goserveit && make install
+git clone https://github.com/caio-ishikawa/goserveit.git && cd goserveit && make build
 ```
 
 ### Uninstalling
